@@ -85,6 +85,19 @@ public class LinkedListMain {
         else
             System.out.println("Element is Found");
 
+        /*
+         UC8: Insert 40 After 30
+         */
+        linkedList5.display();
+
+        boolean isInsert = linkedList5.insertAfter(30,40);
+        if (isInsert)
+            System.out.println("Element 40 is Inserted");
+        else
+            System.out.println("Element 40 is NOT inserted");
+        linkedList5.display();
+
+
     }
 
 }
