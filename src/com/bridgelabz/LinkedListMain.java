@@ -45,6 +45,17 @@ public class LinkedListMain {
             System.out.println("Element 30 is NOt inserted");
         linkedList3.display();
 
+        /*
+         UC5: Linked list PopMethod to delete the first element.
+         */
+        linkedList3.display();
+        Integer poppedData = linkedList3.pop();
+        if (poppedData == null)
+            System.out.println("LinkedList is Empty");
+        else
+            System.out.println("The Element popped is "+poppedData);
+        linkedList3.display();
+
     }
 
 }
