@@ -97,5 +97,41 @@ public class LinkedList <T>{
             temp.next = null;
             tail = temp;
             return popLastData;
+
+    }
+    public Node<T> delete(T delete) {
+        /*
+         * Deleting the node:-
+         * creating temp node to search the node for deleting
+         */
+        Node<T> temp1 = head;
+        Node<T> temp2 = head;
+        Node<T> temp3 = head;
+        int count = 0;
+        while (temp1 != null & temp2 != null & temp3 != null) {
+            count++;
+            if (count > 2) {
+                temp3 = temp3.next;
+            }
+            if (temp1.data == delete) {
+                temp2 = temp2.next;
+                temp3.next = temp2;
+            }
+            temp1 = temp1.next;
+            temp2 = temp2.next;
+        }
+        return temp1;
+    }
+
+    public void size() {
+
+        Node<T> temp = head;//create temp node to find the count.
+        int count = 0;//count starts from when temp is equal to head.
+        while (temp != null) {  //By using while loop, count is added till the temp become null(Tail).
+            temp = temp.next;
+            count++;
+        }
+        System.out.println("Size of the linked list is " + count);
+
     }
 }
