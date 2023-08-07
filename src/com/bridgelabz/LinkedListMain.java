@@ -110,6 +110,19 @@ public class LinkedListMain {
         linkedList5.display();
         linkedList5.size();
 
+    /*
+         UC10: Linked list in Ascending Order.
+         */
+        SortedLinkedList sortedLinkedList =  new SortedLinkedList();
+        sortedLinkedList.add(56);
+        sortedLinkedList.add(30);
+        sortedLinkedList.add(40);
+        sortedLinkedList.add(70);
+        System.out.println("Before Sorting :-");
+        sortedLinkedList.display();
+        sortedLinkedList.sortedList();
+        System.out.println("After Sorting :-");
+        sortedLinkedList.display();
 
     }
 
