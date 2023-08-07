@@ -71,6 +71,19 @@ public class LinkedListMain {
             System.out.println("The popLast element is "+poppedLastData);
         linkedList4.display();
 
+        /*
+         UC7: to search the Node value 30.
+         */
+        LinkedList<Integer> linkedList5 = new LinkedList<>();
+        linkedList5.append(56);
+        linkedList5.append(30);
+        linkedList5.append(70);
+        linkedList5.display();
+        Node<Integer> searchData = linkedList5.search(30);
+        if (searchData == null)
+            System.out.println("Element is NOT Found");
+        else
+            System.out.println("Element is Found");
 
     }
 
