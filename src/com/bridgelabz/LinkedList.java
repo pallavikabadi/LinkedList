@@ -45,7 +45,31 @@ public class LinkedList <T>{
         }else {
             tail.next = newNode;
             tail = newNode;
-
         }
+    }
+    public Node<T> search(T searchData) {
+        /*
+         when temp node is head,and temp is not equal to null then its data equals to search data
+         */
+        Node<T> temp = head;;
+        while (temp != null) {
+            if (temp.data.equals(searchData))
+                return temp;
+            temp = temp.next;
+        }
+        return null; //when temp = null;
+    }
+    public boolean insertAfter(T searchData, T insertData) {
+        /*
+         * After searching the node the new node is inserted next ot it.
+         */
+        Node<T> newNode = new Node<>(insertData);
+        Node<T> searchedNode = search(searchData);
+        if (searchedNode != null) {
+            newNode.next = searchedNode.next;
+            searchedNode.next = newNode;
+            return true;
+        }
+        return false;
     }
 }
